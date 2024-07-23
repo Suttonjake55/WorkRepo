@@ -1,6 +1,3 @@
-﻿#Set Execution Policy
-Set-ExecutionPolicy Bypass
-
 #Install Script
 Install-Script -Name Get-WindowsAutopilotInfo
 
