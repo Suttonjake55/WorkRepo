@@ -1,6 +1,6 @@
-$APcomputers = Get-ADComputer -Filter * -SearchBase "OU=Autopilot PCs,OU=MHP,DC=mhp,DC=local"
+$APcomputers = Get-ADComputer -Filter * -SearchBase "OU=Autopilot PCs,OU=,DC=,DC="
 ForEach ($PC in $APcomputers) {
-    if ($PC.NAME -like "MHP*") {
-        Move-ADObject -Identity $PC.DistinguishedName -TargetPath "OU=IT Spares,OU=MHP,DC=mhp,DC=local"
+    if ($PC.NAME -like "*") {
+        Move-ADObject -Identity $PC.DistinguishedName -TargetPath "OU=,OU=,DC=,DC="
     }
 }
